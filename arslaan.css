@@ -1,0 +1,332 @@
+/* ===== Base Styles ===== */
+:root {
+    /* Light Theme */
+    --background: #f8f9fa;
+    --text: #2d2d2d;
+    --header-bg: #ffffff;
+    --header-text: #2d2d2d;
+    --card-bg: #ffffff;
+    --accent: #007bff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme="dark"] {
+    /* Dark Theme */
+    --background: #121212;
+    --text: #e0e0e0;
+    --header-bg: #1f1f1f;
+    --card-bg: #2d2d2d;
+    --accent: #00ff88;
+  }
+  
+  /* ===== Global Styles ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    transition: 0.3s all ease;
+  }
+  
+  /* ===== Header ===== */
+  header {
+    background: var(--header-bg);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--accent);
+  }
+  
+  /* ===== Theme Toggle Button ===== */
+  #themeToggle {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #themeToggle:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ===== Sections Common Styles ===== */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--accent);
+  }
+  
+  /* ===== Home Section ===== */
+  #home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 8rem;
+  }
+  
+  .home-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  /* ===== About Section ===== */
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  
+  .profile-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  
+  /* ===== Skills Section ===== */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .skill-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skill-card i {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  /* ===== Projects Section ===== */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-card h3 {
+    padding: 1rem;
+    color: var(--accent);
+  }
+  
+  .project-card p {
+    padding: 0 1rem 1rem;
+  }
+  
+  /* ===== Contact Section ===== */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo-3d {
+    width: 80px;
+    height: 80px;
+    transition: 0.3s;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  }
+  
+  .logo-3d:hover {
+    transform: scale(1.2) rotate(15deg);
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #themeToggle {
+      padding: 6px 12px;
+    }
+    
+    .home-content h2 {
+      font-size: 2.5rem;
+    }
+  }
+  /* ===== Languages Section ===== */
+#languages {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 4rem 2rem;
+  }
+  
+  .languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .language-card {
+    position: relative;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+  }
+  
+  .language-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .language-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+  }
+  
+  /* Tooltip */
+  .language-card::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .language-card:hover::after {
+    opacity: 1;
+    bottom: -25px;
+  }
+  /* ===== Language Cards with Progress Bars ===== */
+.language-card {
+    position: relative;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Progress Bars (Add inside .language-card) */
+  .progress-bar {
+    width: 80%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    width: 0;
+    transition: width 0.5s ease;
+  }
+  
+  /* Hover to show progress */
+  .language-card:hover .progress-fill {
+    width: 80%; /* Adjust % based on skill level */
+  }
+  
+  /* Specific Skill Levels (Add inline styles in HTML) */
+  <!-- Example for Python -->
+  <div class="progress-bar">
+      <div class="progress-fill" style="width: 90%"></div>
+  </div>
