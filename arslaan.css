@@ -18,7 +18,28 @@
     --card-bg: #2d2d2d;
     --accent: #00ff88;
   }
-  
+  .btn-3d{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  /* 1st button style */
+ .b3d{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+ }
   /* ===== Global Styles ===== */
   * {
     margin: 0;
@@ -206,8 +227,8 @@
   }
   
   .logo-3d {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     transition: 0.3s;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
   }
@@ -326,7 +347,7 @@
   }
   
   /* Specific Skill Levels (Add inline styles in HTML) */
-/*   <!-- Example for Python -->
-  <div class="progress-bar">
+  /* <!-- Example for Python --> */
+  /* <div class="progress-bar">
       <div class="progress-fill" style="width: 90%"></div>
   </div> */
