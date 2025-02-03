@@ -341,11 +341,170 @@
     transition: width 0.5s ease;
   }
   
+  /* ===== Contact Section ===== */
+#contact {
+  padding: 4rem 2rem;
+  background: var(--card-bg);
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--background);
+  border: 2px solid var(--accent);
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* WhatsApp Specific Styling */
+.whatsapp .contact-icon {
+  background: #25D366;
+  color: white;
+}
+
+/* Email Specific Styling */
+.email .contact-icon {
+  background: #EA4335;
+  color: white;
+}
+
+/* Theme-Specific Icons */
+.theme-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.theme-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.theme-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Hide dark icon by default */
+.dark-icon { display: none; }
+
+[data-theme="dark"] {
+  .light-icon { display: none; }
+  .dark-icon { display: block; }
+}
   /* Hover to show progress */
   .language-card:hover .progress-fill {
     width: 80%; /* Adjust % based on skill level */
   }
-  
+  /* Add to Arslaan.css */
+.skill-card .fa-calculator {
+  color: #004080; /* Tally Prime brand color */
+}
+
+.skill-card .fa-file-excel {
+  color: #217346; /* Excel green */
+}
+
+.skill-card .fa-file-word {
+  color: #2B579A; /* Word blue */
+}
+
+.skill-card .fa-file-powerpoint {
+  color: #D24726; /* PowerPoint orange */
+}
+
+/* For dark mode compatibility */
+[data-theme="dark"] {
+  .skill-card .fa-calculator { color: #4d9eff; }
+  .skill-card .fa-file-excel { color: #2dcc70; }
+  .skill-card .fa-file-word { color: #4a8cff; }
+  .skill-card .fa-file-powerpoint { color: #ff6b4a; }
+}/* Languages Section */
+#languages {
+    background: var(--section-bg);
+    padding: 4rem 2rem;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.language-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tech-name {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+/* Tool Colors */
+.fa-python { color: #3776AB; }
+.fa-react { color: #61DAFB; }
+.fa-palette { color: #31A8FF; } /* Photoshop */
+.fa-film { color: #EA77FF; } /* Premiere Pro */
+.fa-database { color: #00758F; } /* MySQL */
+.fa-docker { color: #2496ED; }
+.fa-aws { color: #FF9900; }
+.fa-git-alt { color: #F05032; }
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] {
+    .fa-python { color: #4B8BBE; }
+    .fa-react { color: #88DEDF; }
+    .fa-palette { color: #6FBAFF; }
+    .fa-film { color: #FF94FF; }
+    .fa-database { color: #0096B0; }
+    .fa-docker { color: #4DAAE8; }
+    .fa-aws { color: #FFB366; }
+    .fa-git-alt { color: #FF756E; }
+}
+
   /* Specific Skill Levels (Add inline styles in HTML) */
   /* <!-- Example for Python --> */
   /* <div class="progress-bar">
